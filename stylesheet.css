@@ -177,8 +177,80 @@ td.muted {
   white-space: nowrap;
 }
 
+/* Phones: stack the two-column layouts into a single column */
 @media (max-width: 600px) {
-  td.muted {
+  body {
+    padding: 16px 0;
+  }
+
+  /* Intro: photo on top, then name, text, and links, all centered */
+  table.intro,
+  table.intro > tbody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  table.intro tr {
+    display: contents;
+  }
+
+  table.intro td {
+    display: block;
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 16px !important;
+    text-align: center;
+  }
+
+  table.intro td.intro-spacer {
+    display: none;
+  }
+
+  table.intro td.intro-photo {
+    order: -1;
+    padding-bottom: 20px !important;
+  }
+
+  .profile-photo {
+    max-width: 200px;
+  }
+
+  .pill-links {
+    margin-top: 16px;
+  }
+
+  .pill {
+    margin: 0 4px 8px;
+  }
+
+  /* Entries: figure on top, then text; dates drop under the text */
+  table.entries,
+  table.entries > tbody,
+  table.entries tr,
+  table.entries td {
+    display: block;
+    width: auto !important;
+  }
+
+  table.entries tr {
+    margin: 8px 0 28px;
+  }
+
+  table.entries td {
+    padding: 0 16px !important;
+    text-align: left !important;
+  }
+
+  table.entries td + td {
+    margin-top: 12px;
+  }
+
+  table.entries td.muted {
+    margin-top: 2px;
     white-space: normal;
+  }
+
+  .pub-figure {
+    max-width: 320px;
   }
 }
