@@ -163,6 +163,18 @@ h2 {
   color: #1772d0;
 }
 
+.authors {
+  color: #777;
+}
+
+.authors strong {
+  color: #000;
+}
+
+.muted {
+  color: #777;
+}
+
 .profile-photo {
   width: 100%;
   max-width: 100%;
