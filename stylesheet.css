@@ -106,7 +106,69 @@ h2 {
   padding-top: 20px;
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.bio,
+.bio a {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bio {
+  color: #222;
+}
+
+.bio a {
+  font-weight: 700;
+}
+
+.interests,
+.interests strong {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.interests {
+  color: #555;
+}
+
+.interests strong {
+  color: #111;
+}
+
+.marker {
+  background: linear-gradient(transparent 55%, #e6e9f0 55%);
+  padding: 0 2px;
+}
+
+.pill-links {
+  margin-top: 16px;
+}
+
+.pill {
+  display: inline-block;
+  margin: 0 6px 8px 0;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background-color: #eaf1fd;
+  color: #1772d0;
+  font-weight: 700;
+}
+
+.pill:focus,
+.pill:hover {
+  background-color: #d6e5fb;
+  color: #1772d0;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 .one {
