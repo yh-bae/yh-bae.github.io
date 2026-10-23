@@ -100,11 +100,11 @@ h2 {
 .pill {
   display: inline-block;
   margin: 0 8px 8px 0;
-  padding: 7px 16px;
+  padding: 5px 14px;
   border-radius: 999px;
   background-color: #eaf0fe;
   color: #2563eb;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
 }
 
