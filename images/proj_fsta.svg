@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" font-family="Pretendard, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- Shared project-figure style: 800 nm red, 400 nm blue, white light rainbow, NOPA green; dark mirrors, gray beam splitters, beige crystals -->
+  <defs>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1FA45B"/></marker>
+    <linearGradient id="wl-in" gradientUnits="userSpaceOnUse" x1="208" y1="141" x2="248" y2="193">
+      <stop offset="0" stop-color="#E5383B"/><stop offset="0.35" stop-color="#F59E0B"/><stop offset="0.6" stop-color="#FACC15"/><stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="wl-tr" gradientUnits="userSpaceOnUse" x1="252" y1="194" x2="316" y2="111">
+      <stop offset="0" stop-color="#22C55E"/><stop offset="0.5" stop-color="#FACC15"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="wl-ta" gradientUnits="userSpaceOnUse" x1="252" y1="206" x2="284" y2="250">
+      <stop offset="0" stop-color="#22C55E"/><stop offset="1" stop-color="#22B8CF"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#fff"/>
+
+  <!-- delay stage -->
+  <rect x="82" y="86" width="74" height="48" rx="8" fill="none" stroke="#9AA3AD" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <g fill="none" stroke-width="4" stroke-linecap="round">
+    <!-- probe: 800 nm through the delay line, onto the mirror, into WLG -->
+    <path d="M14,110 H184 L198,128" stroke="#E5383B"/>
+    <!-- white-light probe onto the sample, then transmitted (TA) and reflected (TR) -->
+    <path d="M208,141 L248,193" stroke="url(#wl-in)"/>
+    <path d="M252,194 L316,111" stroke="url(#wl-tr)"/>
+    <path d="M252,206 L284,250" stroke="url(#wl-ta)"/>
+    <!-- pump -->
+    <path d="M250,14 V188" stroke="#1FA45B" marker-end="url(#ar-green)"/>
+  </g>
+
+  <!-- optics -->
+  <line x1="171" y1="104" x2="197" y2="117" stroke="#3A3A3A" stroke-width="6" stroke-linecap="round"/>
+  <rect x="-15" y="-6" width="30" height="12" rx="2" transform="translate(203,135) rotate(-37.5)" fill="#F6E7B8" stroke="#6B6B6B" stroke-width="2"/>
+  <rect x="214" y="196" width="72" height="9" rx="2" fill="#FBD38D" stroke="#B7791F" stroke-width="2"/>
+  <!-- chopper -->
+  <circle cx="250" cy="58" r="16" fill="#fff" stroke="#3A3A3A" stroke-width="3"/>
+  <path d="M250,58 L250,42 A16,16 0 0 1 266,58 Z M250,58 L250,74 A16,16 0 0 1 234,58 Z" fill="#3A3A3A"/>
+  <!-- detectors -->
+  <rect x="316" y="84" width="56" height="36" rx="6" fill="#3A3A3A"/>
+  <rect x="270" y="252" width="56" height="36" rx="6" fill="#3A3A3A"/>
+
+  <!-- labels -->
+  <g font-size="20" fill="#333">
+    <text x="12" y="96" fill="#E5383B">Probe</text>
+    <text x="119" y="158" text-anchor="middle">Delay</text>
+    <text x="264" y="34" fill="#1FA45B">Pump</text>
+    <text x="294" y="214">Sample</text>
+    <text x="344" y="109" text-anchor="middle" fill="#fff" font-weight="700" font-size="22">TR</text>
+    <text x="298" y="277" text-anchor="middle" fill="#fff" font-weight="700" font-size="22">TA</text>
+  </g>
+</svg>
