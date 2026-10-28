@@ -119,11 +119,21 @@ h2 {
   color: #777;
 }
 
+/* Figures sit on the page without a frame; the project SVGs are cropped to their drawings. */
 .pub-figure {
   display: block;
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Figures and the profile photo are not links and cannot be opened on their own:
+   no click, drag, right-click "open image", or long-press menu on phones. */
+.pub-figure,
+.profile-photo {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 
 .pub-title {
